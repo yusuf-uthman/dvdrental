@@ -7,11 +7,11 @@
 
 --{{ config(materialized='table') }}
 
-with src_actors as (
+with src_film as (
 
-select * from public.actor_info
+select * from public.film
 
 )
 
 select *
-from src_actors
+from src_film

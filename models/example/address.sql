@@ -9,12 +9,17 @@
 
 --{{ config(materialized='table') }}
 
-with src_customer as (
+with src_address as (
 
-select * from public.customer
+select * from public.address
 
 )
 
 select *
-from src_customer
+from src_address
 
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
