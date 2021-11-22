@@ -24,9 +24,6 @@ from public.city
 country as (
 select country_id, country
 from public.country
-),
-store as (
-select * from public.store
 )
 select 
 distinct
